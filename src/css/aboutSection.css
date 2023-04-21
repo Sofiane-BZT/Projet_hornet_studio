@@ -1,0 +1,16 @@
+.about-container {
+  width: 100vw;
+}
+
+.about-title {
+  display: flex;
+  color: #557e8a;
+  margin: 40px;
+  justify-content: center;
+}
+
+.about-description {
+  display: flex;
+  text-align: center;
+  padding: 10px 50px 80px;
+}

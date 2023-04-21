@@ -1,23 +1,18 @@
+import "./css/app.css";
 
-import './App.css';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import { Header } from './components/header/Header';
-
+import { Routes, Route } from "react-router-dom";
+import Accueil from "./pages/Accueil";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-      <Router>
-        <Header />
-        <Switch>
-          {/* <Route path="/about">
-            <About />
-          </Route> */}
-        </Switch>
-    </Router>
-  
-  </>
-  )
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<Accueil />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
