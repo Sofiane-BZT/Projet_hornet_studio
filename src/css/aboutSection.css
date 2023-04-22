@@ -4,7 +4,8 @@
 
 .about-title {
   display: flex;
-  color: #557e8a;
+  /* color: #557e8a; */
+  color: #195175;
   margin: 40px;
   justify-content: center;
 }
@@ -12,5 +13,5 @@
 .about-description {
   display: flex;
   text-align: center;
-  padding: 10px 50px 80px;
+  padding: 10px 50px 10px;
 }

@@ -2,6 +2,10 @@
 @import "./navbar.css";
 @import "./heroSection.css";
 @import "./aboutSection.css";
+@import "./recentAchievementsSection.css";
+@import "./recentAchievementsCard.css";
+@import "./achievementsSection.css";
+@import "./achievementsCard.css";
 
 * {
   margin: 0;
