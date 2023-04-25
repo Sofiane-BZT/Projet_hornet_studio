@@ -1,5 +1,6 @@
 .recent-achievements-section {
   width: 100vw;
+  margin-bottom: 40px;
 }
 
 .recent-achievements-section .title {
@@ -8,6 +9,7 @@
   padding-top: 25px;
   padding-bottom: 50px;
   justify-content: center;
+  text-align: center;
 }
 .recent-achievements-container {
   margin-left: 100px;

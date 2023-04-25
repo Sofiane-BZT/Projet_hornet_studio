@@ -1,0 +1,18 @@
+.contact-section {
+  width: 100vw;
+  margin-bottom: 40px;
+}
+
+.contact-text {
+  padding: 40px;
+  display: flex;
+  text-align: center;
+}
+
+.contact_button {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+}

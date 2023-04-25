@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Accueil from "./pages/Accueil";
 import Navbar from "./components/Navbar";
 import Piercing from "./pages/Piercing";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" exact element={<Accueil />} />
         <Route path="/piercing" exact element={<Piercing />} />
       </Routes>
+      <Footer />
     </>
   );
 }

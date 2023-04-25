@@ -1,0 +1,50 @@
+section {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.piercing-hero-img {
+  object-fit: cover;
+  width: 50%;
+}
+
+.piercing-about {
+  width: 50%;
+
+  justify-content: center;
+  background-color: #e9f3fb;
+}
+
+.piercing-title {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 40px 0;
+}
+
+.piercing-description {
+  display: flex;
+  justify-content: center;
+  margin: 0 50px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.title-color {
+  color: #195175;
+}
+
+@media screen and (max-width: 992px) {
+  .piercing-hero-img {
+    width: 100%;
+  }
+  .piercing-about {
+    width: 100%;
+  }
+
+  section {
+    height: auto;
+  }
+}
