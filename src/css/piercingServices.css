@@ -1,0 +1,25 @@
+.p-services {
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.p-services h1 {
+  padding: 30px 0;
+}
+
+.p-services p {
+  padding-bottom: 20px;
+}
+.p-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 0.3fr));
+  gap: 10px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 992px) {
+  .p-cards-container {
+    grid-template-columns: repeat(1, minmax(250px, 0.3fr));
+    gap: 20px;
+  }
+}

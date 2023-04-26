@@ -10,6 +10,8 @@
 @import "./contactButton.css";
 @import "./footer.css";
 @import "./piercingHeroSection.css";
+@import "./piercingServices.css";
+@import "./piercingLocationCard.css";
 
 * {
   margin: 0;

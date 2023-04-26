@@ -3,7 +3,7 @@ import React from "react";
 function PiercingHeroSection() {
   return (
     <>
-      <section>
+      <section className="piercing-hero">
         <div className="piercing-hero-img">
           <img
             src="../images/piercing_main_img.jpg"

@@ -20,7 +20,7 @@ function AboutSection() {
     const { titreApropos, textApropos } = data.pageAccueil;
 
     return (
-      <div className="about-container ">
+      <div className="about-container">
         <div className="about-title">
           <h1> {titreApropos}</h1>
         </div>

@@ -1,7 +1,7 @@
-section {
+.piercing-hero {
   display: flex;
   width: 100vw;
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -13,7 +13,6 @@ section {
 
 .piercing-about {
   width: 50%;
-
   justify-content: center;
   background-color: #e9f3fb;
 }
@@ -44,7 +43,7 @@ section {
     width: 100%;
   }
 
-  section {
-    height: auto;
+  .piercing-hero {
+    height: 100%;
   }
 }
