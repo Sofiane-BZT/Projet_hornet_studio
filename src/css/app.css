@@ -12,6 +12,8 @@
 @import "./piercingHeroSection.css";
 @import "./piercingServices.css";
 @import "./piercingLocationCard.css";
+@import "./shopProducts.css";
+@import "./shopCard.css";
 
 * {
   margin: 0;

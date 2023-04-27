@@ -1,0 +1,23 @@
+.s-products {
+  width: 100vw;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0 35px 0;
+}
+
+.s-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 0.2fr));
+  gap: 50px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 992px) {
+  .s-cards-container {
+    grid-template-columns: repeat(1, minmax(250px, 0.3fr));
+    gap: 20px;
+  }
+}
