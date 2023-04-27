@@ -1,57 +1,68 @@
 import React, { useState } from "react";
 import PiercingLocationCard from "./PiercingLocationCard";
 import { useQuery } from "graphql-hooks";
-
-const PIERCING_PAGE_QUERY = `query TitrePageQuery {
-
-    pagePiercing {
-      id
-      pImagePrincipale {
-        url
-      }
-      pTitrePrincipal
-      pDescriptionPrincipale
-      pTitreServices
-      pDescriptionServices
-      pServiceVisageTitre
-      pServiceVisageImage {
-        url
-      }
-      prixLobe
-      prixAntitragus
-      prixTragus
-      prixConch
-      prixSnug
-      prixDaith
-      prixFlat
-      prixAntihelix
-      prixHelix
-      prixRook
-      prixIndustriel
-    }
-  }
-`;
+import { PIERCING_PAGE_QUERY } from "./piercingQueries";
 
 function PiercingServices() {
   const { loading, error, data } = useQuery(PIERCING_PAGE_QUERY);
+  const [piercingData, setPiercingData] = useState(null);
 
   try {
-    if (loading) throw new Error("Loading...");
+    if (loading) return <p>Loading...</p>;
+    if (error) throw new Error(error.message);
 
-    if (error) throw new Error(JSON.stringify(error));
-
-    const { pTitreServices, pDescriptionServices } = data.pagePiercing;
+    if (!piercingData) {
+      setPiercingData(data.pagePiercing);
+    }
 
     return (
       <>
         <section className="p-services">
-          <h1>{pTitreServices}</h1>
+          <h1>{piercingData.pTitreServices}</h1>
 
-          <p>{pDescriptionServices}</p>
+          <p>{piercingData.pDescriptionServices}</p>
           <div className="p-cards-container">
-            <PiercingLocationCard />
-            <PiercingLocationCard />
-            <PiercingLocationCard />
+            <PiercingLocationCard
+              title={piercingData.pServiceVisageTitre}
+              image={piercingData.pServiceVisageImage.url}
+              prix={[
+                piercingData.prixArcade,
+                piercingData.prixNarine,
+                piercingData.prixSeptum,
+                piercingData.prixBridge,
+                piercingData.prixPommette,
+                piercingData.prixLabretDecale,
+                piercingData.prixLabret,
+                piercingData.prixMedusa,
+                piercingData.prixSmiley,
+              ]}
+            />
+            <PiercingLocationCard
+              title={piercingData.pServiceOreilleTitre}
+              image={piercingData.pServiceOreilleImage.url}
+              prix={[
+                piercingData.prixLobe,
+                piercingData.prixAntitragus,
+                piercingData.prixTragus,
+                piercingData.prixConch,
+                piercingData.prixSnug,
+                piercingData.prixDaith,
+                piercingData.prixFlat,
+                piercingData.prixAntihelix,
+                piercingData.prixHelix,
+                piercingData.prixRook,
+                piercingData.prixIndustriel,
+              ]}
+            />
+            <PiercingLocationCard
+              title={piercingData.pServiceCorpsTitre}
+              image={piercingData.pServiceCorpsImage.url}
+              prix={[
+                piercingData.prixMicrodermal,
+                piercingData.prixTeton,
+                piercingData.prixNombril,
+              ]}
+            />
           </div>
         </section>
       </>
